@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace Ordering.Application.Exceptions
 {
-    public class ValidationException:ApplicationException
+    public class ValidationException : ApplicationException
     {
         public ValidationException()
            : base("One or more validation failures have occurred.")
         {
             Errors = new Dictionary<string, string[]>();
+
         }
 
         public ValidationException(IEnumerable<ValidationFailure> failures)
@@ -26,4 +27,4 @@ namespace Ordering.Application.Exceptions
         public IDictionary<string, string[]> Errors { get; }
     }
 }
-}
+
