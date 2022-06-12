@@ -30,6 +30,7 @@ namespace Catalog.API.Controllers
             var products =  await _repository.GetProducts();
             return Ok(products);
 
+
         }
 
         // id:length(24) para o mongodb
